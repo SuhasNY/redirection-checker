@@ -38,7 +38,7 @@ function extractRealURL(href) {
 // [Functionality: Check URL with Safe Browsing]
 // Sends a URL to Google Safe Browsing API to check if it's flagged as malicious
 async function checkURLWithSafeBrowsing(url) {
-  const apiKey = "AIzaSyCteteKXR9GHUEJ8J-17Nhv8i3unRR3lic"; // Replace with your actual API key
+  const apiKey = "${GOOGLE_API}"; // Replace with your actual API key
   const apiEndpoint = `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=${apiKey}`;
 
   const requestPayload = {
