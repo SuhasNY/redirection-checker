@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   // [Functionality: Check Domain Reputation]
   if (request.type === "checkDomainReputation") {
     const domain = request.domain; // Extract the domain to check
-    const API_KEY = "at_YUfkoBbYAJQKCVgUC2WMSPiHkT0zE"; // WHOISXMLAPI API Key
+    const API_KEY = "${WHOIS_API}"; // WHOISXMLAPI API Key
     const apiUrl = `https://domain-reputation.whoisxmlapi.com/api/v2?apiKey=${API_KEY}&domainName=${domain}`;
 
     fetch(apiUrl)
@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   // [Functionality: Get Warnings]
   if (request.type === "getWarnings") {
     const domain = request.domain; // Extract the domain to check
-    const API_KEY = "at_YUfkoBbYAJQKCVgUC2WMSPiHkT0zE"; // WHOISXMLAPI API Key
+    const API_KEY = "${WHOIS_API}"; // WHOISXMLAPI API Key
     const apiUrl = `https://domain-reputation.whoisxmlapi.com/api/v2?apiKey=${API_KEY}&domainName=${domain}`;
 
     fetch(apiUrl)
